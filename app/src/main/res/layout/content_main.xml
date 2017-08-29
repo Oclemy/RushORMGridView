@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+ -  Our ContentMain.xml file.
+ -  Shall get inflated to MainActivity.
+ -  Root tag is relativeLayout.
+ -  Contains GridView.
+-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,11 +17,9 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.tutorials.hp.rushormgridview.MainActivity"
     tools:showIn="@layout/activity_main">
-
     <GridView
         android:id="@+id/gv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numColumns="2"
-        />
+        android:numColumns="2"/>
 </RelativeLayout>
