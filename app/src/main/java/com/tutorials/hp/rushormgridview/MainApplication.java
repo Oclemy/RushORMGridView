@@ -1,12 +1,13 @@
 package com.tutorials.hp.rushormgridview;
 
 import android.app.Application;
-
 import co.uk.rushorm.android.AndroidInitializeConfig;
 import co.uk.rushorm.core.RushCore;
 
 /**
- * Created by Oclemy on 12/8/2016 for ProgrammingWizards Channel and http://www.camposha.com.
+ - Our MainApplication.
+ - Derives from android.app.Application.
+ - We first intantiate a configuration object and pass it to our static initialize() method of RushCore class.
  */
 public class MainApplication extends Application {
     @Override

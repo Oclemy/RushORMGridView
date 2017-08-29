@@ -15,7 +15,13 @@ import java.util.List;
 
 
 /**
- * Created by Oclemmy on 16/12/2016 for ProgrammingWizards Channel and http://www.Camposha.com.
+ - Our adapter class.
+ - Derives from android.widget.BaseAdapter.
+ - Here we: inflate our model xml layout to viewitems and recycle it, bind data to these viewitems.
+ - The data we bind is passed to us via constructor.
+ - Apart from the data being passed us, we are also passed a Context object that will help us getSystemService that we  need for our inflation of model layout.
+ - Being that we derive from BaseAdapter, we override getCount() which returns total count of our data, getItem() which returns each data object,getItemId()
+ which returns the object's id, and getView() to return us its view().
  */
 public class CustomAdapter extends BaseAdapter {
 
@@ -28,22 +34,18 @@ public class CustomAdapter extends BaseAdapter {
         this.c = c;
         this.spacecrafts = spacecrafts;
     }
-
     @Override
     public int getCount() {
         return spacecrafts.size();
     }
-
     @Override
     public Object getItem(int position) {
         return spacecrafts.get(position);
     }
-
     @Override
     public long getItemId(int position) {
         return position;
     }
-
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         if(inflater==null)
@@ -76,15 +78,11 @@ public class CustomAdapter extends BaseAdapter {
 
         return convertView;
     }
-
-
     public Spacecraft getSelectedSpacecraft()
     {
         return spacecraft;
     }
-
 }
-
 
 
 

@@ -18,7 +18,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import co.uk.rushorm.core.RushSearch;
-
+/*
+- Our MainActivity class.
+- Derives from AppCompatActivity which is a Base class for activities that use the support library action bar features.
+- Methods: onCreate(),displayDialog(),retrieve(),save(),onContextItemSelected().
+- Inflated From activity_main.xml using the setContentView() method.
+- The views we use are GridView,EditTexts and buttons.
+- Reference them from our layout specification using findViewById().
+- Instantiate adapter and set it to GridView.
+- displayDialog() will create and display input dialog,save() will either insert new data or update existing data,retrieve will
+retrieve data from sqlite and bind to gridview. We will also be able to delete  data when delete menu item is selected.
+ */
 public class MainActivity extends AppCompatActivity {
 
     GridView gv;
@@ -48,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     /*
     DISPLAY I
      */
@@ -116,7 +125,6 @@ public class MainActivity extends AppCompatActivity {
         d.show();
 
     }
-
     /*
     RETRIEVE DATA
      */
@@ -139,9 +147,7 @@ public class MainActivity extends AppCompatActivity {
         s.setPropellant(propellantEditTxt.getText().toString());
         s.save();
         retrieve();
-
     }
-
     /*
     CONTEXTMENU
      */

@@ -8,7 +8,15 @@ import com.tutorials.hp.rushormgridview.R;
 
 
 /**
- * Created by Oclemmy on 16/12/2016 for ProgrammingWizards Channel and http://www.Camposha.com.
+ - ViewHolder class.
+ - This class will hold views to be recycled for each viewitem by our adapter.
+ - This class implements View.OnClickListener interface, hence our custom view shall be clickable.
+ - Methods: onLongClick(),setLongClickListener(),onCreateContextMenuListener().
+ - In this case we have two textviews.
+ - Our views shall be longClickable, hence showing ContextMenu.
+ - So we implement two interfaces: OnLongClickListener and OnCreateContextMenuListener, both belong to android.view.View.
+ - A view object shall be passed via constructor and we use it to reference our widgets using findViewById.
+
  */
 public class MyViewHolder implements View.OnLongClickListener,View.OnCreateContextMenuListener {
 
